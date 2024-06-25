@@ -33,26 +33,14 @@ provide extra guarantees there it won't happen in the future.
   expressive to allow developers to encode the `Int` state variable as words
   instead of numbers.
 - Arrays (users simulate those with maps at the moment).
-- Tact should have more idiomatic ways of handling low level constructs such as
-  `Slice` and `Cell`. This requires introducing some more type-level
-  constructions.
-
-### Type system improvements
-
-- Local type inference, especially for `let`-expressions.
-- Better support for nullable types, for instance, auto-unpacking nullable
-  variables to non-null ones.
 
 ### Map improvements
 
-- Add map traversals, i.e. the ability to iterate over maps.
 - Allow `String` and `coins` as map value type (these are allowed when wrapped
   in a structure anyways).
-- Better map key deletion syntax or builtin function.
 
 ### New operators and syntactic sugar
 
-- More stateful operators: `+=`, `-=`, `++`, `--` , etc.
 - `struct` update syntax.
 - More control-flow operators, for instance, `break` with a label.
 - Balanced arith operations `(x + d, y - d)` which are useful to ensure token
@@ -60,8 +48,7 @@ provide extra guarantees there it won't happen in the future.
 
 ### Error reporting
 
-- Better syntactic error reporting.
-- Improve semantic error reporting and make sure error reporting does not leak
+- Improve semantic error reporting and ensure error reporting does not leak
   to the level of FunC.
 
 ### Contract upgradeability
@@ -79,12 +66,7 @@ and the Tact runtime.
 - Doc comments support.
 - Improve language consistency: for example, `sender()` vs `context().sender`:
   these two also have different gas usage.
-- String and address equality/non-equality operators.
-- Improve the way users work with addresses, e.g. `Address` to `String`
-  conversion.
 - Use of constant strings as the `receive` parameter.
-- Numbers: `_` separator for number literals (`1_000_000`), binary number
-  literals (`0b1010`).
 - Cell-overflow analysis.
 
 ## Dev tooling improvements
